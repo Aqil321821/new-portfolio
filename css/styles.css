@@ -598,9 +598,7 @@ Services
   }
 }
 
-/* talk about small screen 
-without grid different setup */
-/*
+/*  
 =============== 
 Projects
 ===============
@@ -610,6 +608,7 @@ Projects
   max-width: 45rem;
   margin: 0 auto;
   text-align: start;
+ 
 }
 
 .project {
@@ -617,6 +616,7 @@ Projects
   background: var(--clr-primary-5);
   border-radius: var(--radius);
   margin-bottom: 2rem;
+ border: var(--clr-primary-3) solid 1px;
 }
 
 .project-info {
@@ -628,11 +628,16 @@ Projects
   transform: translate(-50%, -50%);
   transition: var(--transition);
   opacity: 0;
+  
+
 }
 
 .project-info p {
   text-transform: capitalize;
-  color: var(--clr-white);
+  color: #222;
+  line-height: 1.5;
+  background-color:var(--clr-primary-4);
+  font-weight: 500;
 }
 
 .project:hover .project-info {
@@ -643,12 +648,13 @@ Projects
   transition: var(--transition);
   border-radius: var(--radius);
   height: 15rem;
-  -o-object-fit: cover;
+  
   object-fit: cover;
 }
 
 .project:hover .project-img {
   opacity: 0.1;
+  object-fit: contain;
 }
 
 .project::after {
@@ -674,7 +680,7 @@ Projects
   .projects-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 2rem;
+ 
     column-gap: 2rem;
   }
 }
